@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 def prepare_data(train_path, remove_filename_list=[]):
     if 'csv' == train_path.split('.')[-1]:
         files_df = pd.read_csv(train_path)
-        files = files_df['path'].to_list()
+        files = files_df['filepath'].to_list()
     else:
         files = []
         filelist = os.listdir(train_path)

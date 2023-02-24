@@ -3,18 +3,18 @@
         "phase": "test"
     },
     "directory_parameters":{
-        "tdms_channel_name": "CPsignal1",
-        "train_data_dir":"/nas001/users/mg.choi/work/sound.ai/sound.ai.machine/qbank_comp/repro_tdms/train_9class/OK",
-        "test_data_dir":"/nas001/users/mg.choi/work/sound.ai/sound.ai.machine/qbank_comp/repro_tdms/train_9class/OK",
+        "tdms_channel_name": "",
+        "train_data_dir":"/home/jongwook95.lee/study/cnn_based_audio_classification/dataset/audio_files/train/ok/",
+        "test_data_dir":"/home/jongwook95.lee/study/cnn_based_audio_classification/dataset/audio_files/test/ng/",
         "remove_filename_list" : [],
         "experiment_result_path":"./example",
-        "model_save_dir": "./example/best_model/setting1.pt",
-        "model_load_dir": "./example/best_model/setting1.pt",
-        "test_prediction_filename": "OK"
+        "model_save_dir": "./example/best_model/setting.pt",
+        "model_load_dir": "./example/best_model/setting.pt",
+        "test_prediction_filename": "hvae_test_ng"
     },
     "training_parameters":{
-        "epochs": 200,
-        "sep_arch": true,
+        "epochs": 100,
+        "sep_arch": false,
         "embedding_dim": 16,
         "beta": 2,
         "batch_size": 128,
@@ -23,9 +23,9 @@
     "spectrogram_parameters":{
         "n_mels": 128,
         "frames": 5,
-        "n_fft": 2048,
-        "hop_length": 1024,
+        "n_fft": 1024,
+        "hop_length": 256,
         "power": 2,
-        "sr": 25000
+        "sr": 16000
     }
 }
